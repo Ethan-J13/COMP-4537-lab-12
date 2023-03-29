@@ -26,6 +26,13 @@ function pagination({ numberOfPages, currentPage, setCurrentPage }) {
                 {number}
               </button>
             </>)
+          else {
+            return (<>
+              <button onClick={() => setCurrentPage(number)} className={(number === currentPage) ? 'active' : ''}>
+                {number}
+              </button>
+            </>)
+          }
         })
       }
 
